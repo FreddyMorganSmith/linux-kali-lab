@@ -74,9 +74,9 @@ sudo apt -y autoremove
 sudo apt install -y build-essential dkms linux-headers-$(uname -r) \
   net-tools iputils-ping nmap wireshark tcpdump openssh-server isc-dhcp-client
 ```
-## Bring up interfaces (NetworkManager)
-# ensure both interfaces are up
+### Bring up interfaces (NetworkManager)
 ```bash
+# ensure both interfaces are up
 sudo nmcli device connect eth0    # NAT (internet)
 # create persistent static host-only connection
 sudo nmcli connection add type ethernet ifname eth1 con-name hostonly \
